@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks/stats-card",
+	"version": "0.1.0",
+	"title": "Stats Card",
+	"category": "custom-blocks",
+	"icon": "chart-bar",
+	"description": "A single stats card with customizable data points and metrics.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Our Stats"
+		},
+		"items": {
+			"type": "array",
+			"default": []
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#E8F0FE"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#1E40AF"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1E40AF"
+		},
+		"itemColor": {
+			"type": "string",
+			"default": "#1E40AF"
+		},
+		"labelColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"borderWidth": {
+			"type": "number",
+			"default": 10
+		}
+	},
+	"textdomain": "custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
