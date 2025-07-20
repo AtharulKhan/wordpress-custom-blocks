@@ -1,0 +1,128 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks/faq-1",
+	"version": "0.1.0",
+	"title": "FAQ 1",
+	"category": "custom-blocks",
+	"icon": "editor-help",
+	"description": "A two-column FAQ section with expandable items and contact information.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"sectionTitle": {
+			"type": "string",
+			"default": "FAQ"
+		},
+		"mainHeading": {
+			"type": "string",
+			"default": "Do you need some help?"
+		},
+		"description": {
+			"type": "string",
+			"default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+		},
+		"phoneNumber": {
+			"type": "string",
+			"default": "+49 173 123456"
+		},
+		"email": {
+			"type": "string",
+			"default": "hello@copenhagen.doctor"
+		},
+		"faqItems": {
+			"type": "array",
+			"default": [
+				{
+					"question": "Magnam Sint",
+					"answer": "Incidunt beatae provident. Qui dolorem mollitia quam veniam quia accusamus. Id iste nulla omnis quo quas. Aut minima doloribus. Reiciendis et dolorem corrupti necessitatibus deleniti occaecati dolor. Officia officia iste voluptatem eos quia aliquam. Est et amet necessitatibus sed incidu",
+					"isExpanded": true
+				},
+				{
+					"question": "Est Maiores",
+					"answer": "",
+					"isExpanded": false
+				},
+				{
+					"question": "Voluptas Labore Laudantium",
+					"answer": "",
+					"isExpanded": false
+				},
+				{
+					"question": "Neque Omnis",
+					"answer": "",
+					"isExpanded": false
+				},
+				{
+					"question": "Quis Ut",
+					"answer": "",
+					"isExpanded": false
+				}
+			]
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"sectionLabelColor": {
+			"type": "string",
+			"default": "#E5007E"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#666666"
+		},
+		"iconBackgroundColor": {
+			"type": "string",
+			"default": "#E8F4F8"
+		},
+		"iconColor": {
+			"type": "string",
+			"default": "#47B5D3"
+		},
+		"faqBorderColor": {
+			"type": "string",
+			"default": "#E5E7EB"
+		},
+		"faqQuestionColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"faqAnswerColor": {
+			"type": "string",
+			"default": "#666666"
+		},
+		"toggleIconColor": {
+			"type": "string",
+			"default": "#47B5D3"
+		},
+		"toggleIconBackgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"phoneIcon": {
+			"type": "string",
+			"default": "📞"
+		},
+		"emailIcon": {
+			"type": "string",
+			"default": "✉️"
+		}
+	},
+	"textdomain": "custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
