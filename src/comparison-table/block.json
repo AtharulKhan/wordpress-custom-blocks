@@ -1,0 +1,83 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks/comparison-table",
+	"version": "0.1.0",
+	"title": "Comparison Table",
+	"category": "widgets",
+	"icon": "editor-table",
+	"description": "Create a responsive comparison table with up to 5 competitors, tooltips, and customizable colors.",
+	"example": {},
+	"attributes": {
+		"ourCompanyName": {
+			"type": "string",
+			"default": "Our Company"
+		},
+		"competitors": {
+			"type": "array",
+			"default": [
+				{
+					"id": "competitor-1",
+					"name": "Competitor 1"
+				}
+			]
+		},
+		"features": {
+			"type": "array",
+			"default": [
+				{
+					"id": "feature-1",
+					"name": "Feature 1",
+					"tooltip": "",
+					"ourValue": {
+						"type": "check",
+						"value": true
+					},
+					"competitorValues": [
+						{
+							"type": "cross",
+							"value": false
+						}
+					]
+				}
+			]
+		},
+		"tableBackgroundColor": {
+			"type": "string",
+			"default": "#F8F9FA"
+		},
+		"tableBorderColor": {
+			"type": "string",
+			"default": "#DEE2E6"
+		},
+		"ourColumnColor": {
+			"type": "string",
+			"default": "#E3F2FD"
+		},
+		"ourColumnBorderColor": {
+			"type": "string",
+			"default": "#1976D2"
+		},
+		"competitorColumnColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"competitorBorderColor": {
+			"type": "string",
+			"default": "#DEE2E6"
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"textdomain": "custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css", 
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

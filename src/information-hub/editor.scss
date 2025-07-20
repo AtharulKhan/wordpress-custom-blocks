@@ -1,0 +1,50 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-custom-blocks-information-hub {
+	// Add visual feedback in editor
+	.information-card {
+		position: relative;
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			left: -4px;
+			right: -4px;
+			bottom: -4px;
+			border: 2px dashed #ccc;
+			border-radius: 16px;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+			pointer-events: none;
+		}
+
+		&:hover::before {
+			opacity: 0.5;
+		}
+	}
+
+	// Make RichText fields more visible
+	[data-rich-text-placeholder]::before {
+		opacity: 0.5;
+		font-style: italic;
+	}
+
+	// Ensure proper spacing in editor
+	.information-hub-cards {
+		margin-bottom: 20px;
+	}
+
+	// Style the placeholder state
+	.information-hub-placeholder {
+		min-height: 200px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
