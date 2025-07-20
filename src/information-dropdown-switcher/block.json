@@ -1,0 +1,119 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks/information-dropdown-switcher",
+	"version": "0.1.0",
+	"title": "Information Dropdown Switcher",
+	"category": "custom-blocks",
+	"icon": "list-view",
+	"description": "A dropdown switcher block to display information with tooltips in a grid layout.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Programs & Services"
+		},
+		"categories": {
+			"type": "array",
+			"default": [
+				{
+					"id": "1",
+					"name": "Services & Treatment",
+					"items": [
+						{
+							"id": "1-1",
+							"label": "Addiction-Focused Healthcare",
+							"tooltip": "We provide sub-acute programing for substance use disorder. This offers 24/7 medical supervision in a live-in environment at our facilities for patients in need of a higher level of medical care and mental health services that is fully focused on recovery in a sober environment.",
+							"link": "",
+							"checked": true
+						},
+						{
+							"id": "1-2",
+							"label": "Medical Detox",
+							"tooltip": "Medical detoxification services with 24/7 supervision.",
+							"link": "",
+							"checked": true
+						},
+						{
+							"id": "1-3",
+							"label": "Case Management & Discharge Planning",
+							"tooltip": "Comprehensive case management and discharge planning services.",
+							"link": "",
+							"checked": true
+						},
+						{
+							"id": "1-4",
+							"label": "Co-Occurring Disorder Treatment",
+							"tooltip": "Integrated treatment for co-occurring mental health and substance use disorders.",
+							"link": "",
+							"checked": true
+						},
+						{
+							"id": "1-5",
+							"label": "Inpatient Residential (IR & RTC)",
+							"tooltip": "Inpatient residential treatment and residential treatment center services.",
+							"link": "",
+							"checked": true
+						},
+						{
+							"id": "1-6",
+							"label": "Diagnostic & COVID Testing",
+							"tooltip": "Comprehensive diagnostic services including COVID-19 testing.",
+							"link": "",
+							"checked": true
+						}
+					]
+				}
+			]
+		},
+		"selectedCategory": {
+			"type": "string",
+			"default": "0"
+		},
+		"checkmarkColor": {
+			"type": "string",
+			"default": "#10B981"
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#F3F4F6"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#1F2937"
+		},
+		"tooltipBackgroundColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"tooltipTextColor": {
+			"type": "string",
+			"default": "#374151"
+		},
+		"wrapperBackgroundColor": {
+			"type": "string",
+			"default": "#F3F4F6"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#3B82F6"
+		},
+		"borderSide": {
+			"type": "string",
+			"default": "none"
+		}
+	},
+	"textdomain": "custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
