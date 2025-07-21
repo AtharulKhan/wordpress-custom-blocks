@@ -1,0 +1,151 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "custom-blocks/counseling-above-the-fold",
+	"version": "0.1.0",
+	"title": "Counseling Above The Fold",
+	"category": "custom-blocks",
+	"icon": "admin-home",
+	"description": "A hero section with service cards, person image, and benefit cards.",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"],
+		"spacing": {
+			"padding": true,
+			"margin": true
+		}
+	},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Your Path to Mental Wellness"
+		},
+		"subheading": {
+			"type": "string",
+			"default": "What types of service you want?"
+		},
+		"serviceCards": {
+			"type": "array",
+			"default": [
+				{
+					"icon": "◉",
+					"title": "Individual Counselling",
+					"description": "For myself",
+					"link": "#"
+				},
+				{
+					"icon": "◉◉",
+					"title": "Couple Counselling",
+					"description": "For me or my partner",
+					"link": "#"
+				},
+				{
+					"icon": "◉◉◉",
+					"title": "Family Counselling",
+					"description": "For my family member",
+					"link": "#"
+				},
+				{
+					"icon": "◎",
+					"title": "Teens Counselling",
+					"description": "For my child (13-17)",
+					"link": "#"
+				}
+			]
+		},
+		"benefitCards": {
+			"type": "array",
+			"default": [
+				{
+					"emoji": "😊",
+					"text": "Emotional Support"
+				},
+				{
+					"emoji": "🧠",
+					"text": "Improved Coping Skills"
+				},
+				{
+					"emoji": "😌",
+					"text": "Stress Reduction"
+				},
+				{
+					"emoji": "🌱",
+					"text": "Healthy Lifestyle Changes"
+				}
+			]
+		},
+		"personImage": {
+			"type": "object",
+			"default": {
+				"url": "",
+				"id": 0,
+				"alt": ""
+			}
+		},
+		"personImagePosition": {
+			"type": "number",
+			"default": 55
+		},
+		"leftBackgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"rightBackgroundColor": {
+			"type": "string",
+			"default": "#2D5F5D"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"subheadingColor": {
+			"type": "string",
+			"default": "#666666"
+		},
+		"cardBackgroundColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardIconBackgroundColor": {
+			"type": "string",
+			"default": "#2D5F5D"
+		},
+		"cardIconColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"cardTitleColor": {
+			"type": "string",
+			"default": "#000000"
+		},
+		"cardDescriptionColor": {
+			"type": "string",
+			"default": "#666666"
+		},
+		"benefitTextColor": {
+			"type": "string",
+			"default": "#ffffff"
+		},
+		"blockZIndex": {
+			"type": "string",
+			"default": "auto"
+		},
+		"fullHeight": {
+			"type": "boolean",
+			"default": true
+		},
+		"benefitsHorizontalPosition": {
+			"type": "number",
+			"default": 0
+		},
+		"benefitsVerticalPosition": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"textdomain": "custom-blocks",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
